@@ -1,5 +1,5 @@
 .header {
-    background-image: url(../img/background-index.avif);
+    background-image: url(../img/index-back.avif);
     background-size: cover;
     height: 700px;
 }
@@ -40,17 +40,42 @@
 
 
 
-// logos
+// logos sliders
 
-
-.logos {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-
+.slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
 }
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+
+.slider .slide {
+    width: 200px;
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+
+
 
 // card info 
 
