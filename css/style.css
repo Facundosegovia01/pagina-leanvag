@@ -29,7 +29,7 @@
 .header {
   background-image: url(../img/background-index\ .avif);
   background-size: cover;
-  min-height: 100vh;
+  height: 600px;
 }
 
 .header .navbar {
