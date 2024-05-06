@@ -24,13 +24,16 @@
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#como-funciona">Cómo funciona</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#que-incluye">Qué incluye</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#tecnologia-utilizadas">Qué tecnologia utilizamos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/precios.html">Precios</a>
                   </li>
                 </ul>
                 <span class="navbar-text">
@@ -102,7 +105,7 @@
         </div>
     </div>
   </section> 
-<section class="como-funciona-section">
+<section class="como-funciona-section" id="como-funciona">
   <h2>¿Como funciona Lean Vag?</h2>
   <article class="como-funciona">
   <div class="card mb-3" style="max-width: 540px;">
@@ -147,7 +150,7 @@
 </article>
 </section>
 
-<section class="que-incluye-section">
+<section class="que-incluye-section" id="que-incluye">
   <h2>¿Que incluye el servicio de Lean Vag?</h2>
   <article class="que-incluye">
   <div class="card mb-3" style="max-width: 540px;">
@@ -294,7 +297,7 @@
 </article>
 </section>
 <section>
-  <div class="razonesParaElegirnos">
+  <div class="razonesParaElegirnos" id="tecnologia-utilizadas">
     <h2>Tecnologia utilizada</h2>
   </div>
 </section>
@@ -348,17 +351,46 @@
       </div>
       <!-- Copyright -->
       <div class="text-center p-3">
-        <p>Todos los derechos reservados © 2020 Copyright: LEANVAG</p> <img src="img/leanvaglogo.png" alt="logo">
+        <p>Todos los derechos reservados © 2024 Copyright: LEANVAG</p> <img src="img/leanvaglogo.png" alt="logo">
       </div>
       <!-- Copyright -->
     </footer>
     <!-- script -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous">
 </script>
 
 <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 
 </body>
 
